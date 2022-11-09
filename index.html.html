@@ -1,105 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f631a9f550.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcompanieslogo.com%2Ftata-consultancy-services%2Flogo%2F&psig=AOvVaw1FALYAoZ5JVp7UhJFM-ENE&ust=1667983706149000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNCZ3tSZnvsCFQAAAAAdAAAAABAE">
-     <link rel="stylesheet" href="navbar.css" />
+    <link rel="icon" type="image/x-icon"
+        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcompanieslogo.com%2Ftata-consultancy-services%2Flogo%2F&psig=AOvVaw1FALYAoZ5JVp7UhJFM-ENE&ust=1667983706149000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNCZ3tSZnvsCFQAAAAAdAAAAABAE">
+    <link rel="stylesheet" href="navbar.css" />
     <title>TCSiON</title>
-    
+
 </head>
+
 <body>
-  <div style="margin: 0%;">
+    <div style="margin: 0%;">
 
-    <div class="header">
-        <div class="title"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-left.png" alt="Tata Logo"/></div>
-        <div class="title_img"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-right.png" alt="Tata Logo"/></div>
-    </div>
-    <div class="menu-items">
-        <img src="tcsionimg.png">
-        <div class="items">
-            <a class="fa-solid fa-phone" style="color:blue;font-weight:800"> 1800 029 6030</a> |
-            <i class="fa-regular fa-mobile-button"></i><a style="color:red;font-weight:800"> SMS: 'TCSiON' to 16161</a> |
-            <i class="fa-solid fa-envelope"></i><a style="color:blue;font-weight:800"> Email US </a> |
-            <i class="fa-light fa-desktop"></i><a style="color:blue;font-weight:800"> Visit Our Portal  </a> |
-            <i class="fa-solid fa-circle-exclamation"></i><a style="color:blue;font-weight:800"> Help Central </a> |
-            <a style="color:blue;font-weight:800"> Language : </a>
-           
-            <select name="English" style="border-color: blue;">
-                <option value="English" style="color:blue;width: 30px;">English</option>
-                <option value="Spanish" >Spanish</option>
-                <option value="Japanese" >Japanese</option>
-                <option value="Bahasa" >Bahasa</option>
-                <option value="Portugese" >Portugese</option>
-            </select>
-           
+        <div class="header">
+            <div class="title"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-left.png"
+                    alt="Tata Logo" /></div>
+            <div class="title_img"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-right.png"
+                    alt="Tata Logo" /></div>
         </div>
-    </div>
-    </div>
-    
+        <div class="menu-items">
+            <img src="tcsionimg.png">
+            <div class="items">
+                <a id="phoneno" class="fa-solid fa-phone"> 1800 029 6030</a> |
+                <i class="fa-solid fa-message"></i><a id="redtext"> SMS: 'TCSiON' to 16161</a> |
+                <i class="fa-solid fa-envelope"></i><a id="phoneno"> Email US </a> |
+                <i class="fa-solid fa-computer"></i><a id="phoneno"> Visit Our Portal </a> |
+                <i class="fa-solid fa-circle-exclamation"></i><a id="phoneno"> Help Central </a> |
+                <a id="phoneno"> Language : </a>
 
-    <!-- content -->
-    <div class="content">
-       
-        <div class="left-content">
-            <img src="ion-login-banner.jpg" style="margin-left:90px">
-            <div style="margin-left: 120px;font-size:larger;font-weight:600;width:300px;height:50px;">
-                Experience the  <a style="color:blue;font-weight:700"> Best </a><br>
-                   with all new <a  style="color:orange;font-weight:700">TCS iON</a>
+                <select name="English">
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Bahasa">Bahasa</option>
+                    <option value="Portugese">Portugese</option>
+                </select>
+
             </div>
         </div>
-        
-        <div class="right-content" >
+    </div>
+
+
+    <!-- content -->
+    
+    <div class="content">
+
+        <div class="left-content">
+            <img src="ion-login-banner.jpg">
+            <div id="text-wrapper">
+                Experience the <a id="best"> Best </a><br>
+                with all new <a id="orange">TCS iON</a>
+            </div>
+        </div>
+
+        <div class="right-content">
             <form>
                 <h1>Welcome</h1>
-
-                <a href="">Forget Username?</a><br>
-                
-                <input type="text" placeholder="Username" name="username" required> <br> <br>
-            
-                <a href=""> Forget Password?</a><br>
-                <input type="password" placeholder="Password" name="psw" required><br>
-                <br>
-                <input class="checkbx" type="checkbox" checked="false">Keep Me Signed In   <i class="fa-solid fa-circle-info"></i>
-                <br><br>
-                <button class="btn1">Login</button>
-        </form>
-        
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="email" placeholder="Email Id" name="email" required>
+                <input id="radiobtn" type="radio" name="gender" value="male">Male
+                <input id="radiobtn" type="radio" name="gender" value="female">Female
+                <input type="password" placeholder="Password" name="psw" required>
+                <input type="password" placeholder="Confirm Password" name="confpsw" required><br>
+                <button type="submit" class="btn1">Signup</button>
+            </form>
         </div>
     </div>
 
-   
 
- 
+
+    <footer>
     <div class="n-footer">
-        <!-- <div class="division">
-            <p><span><i class="fa-solid fa-users"></i></span><a>  Active Users</a><a>  12,72,000</a> |
-            <span><i class="fa-solid fa-thumbs-up"></i></span><a>  Solution Capabilities</a><a>  18,020</a> |</p>
-        </div> -->
-    
-        <div class="footer-content">
- 
-                <span class="circle FB"><i class="fab fa-facebook-f"></i></span>
-          
-                <span class="circle"><i class="fab fa-twitter"></i></span>
 
-                <span class="circle"><i class="fab fa-linkedin-in"></i></span>
-  
-                <span class="circle"><i class="fab fa-youtube"></i></span>
-  
-                <span class="circle"><i class="fab fa-github"></i></span>
-      
-        </div>      
+        <div class="footer-content">
+
+            <span class="circle FB"><i class="fab fa-facebook-f"></i></span>
+
+            <span class="circle"><i class="fab fa-twitter"></i></span>
+
+            <span class="circle"><i class="fab fa-linkedin-in"></i></span>
+
+            <span class="circle"><i class="fab fa-youtube"></i></span>
+
+            <span class="circle"><i class="fab fa-github"></i></span>
+
+        </div>
         <div class="footer">
-            <span> &copy; </span> 
-            <span id="year1" ></span> 
+            <span> &copy; </span>
+            <span id="year1"></span>
             Tata Consultancy Services. All Rights Reserved.
-			
+
         </div>
-        </div>
-     </div>
-    
+    </div>
+</footer>
+    </div>
+
 </body>
+
 </html>
