@@ -58,20 +58,56 @@
         </div>
 
         <div class="right-content">
-            <form>
+            <form id="form" class="form" action="/welcome">
+                <div class="form-control">
                 <h1>Welcome</h1>
-                <input type="text" placeholder="Username" name="username" required>
-                <input type="email" placeholder="Email Id" name="email" required>
-                <input id="radiobtn" type="radio" name="gender" value="male">Male
-                <input id="radiobtn" type="radio" name="gender" value="female">Female
-                <input type="password" placeholder="Password" name="psw" required>
-                <input type="password" placeholder="Confirm Password" name="confpsw" required><br>
-                <button type="submit" class="btn1">Signup</button>
+                <label for="username">Username:</label>
+                <input type="text" 
+                placeholder="Username" 
+                id="username" name="username"/>
+               
+                </div>
+
+                <div class = "form-control">
+                <label for="email">Email:</label>
+                <input type="email" 
+                placeholder="Email"
+                 id="email"/>
+              
+                </div>
+
+                <div class="form-control">
+                <input id="radiobtn" type="radio" itemid="gender" value="male"/>Male
+                <input id="radiobtn" type="radio" itemid="gender" value="female" >Female<br>
+                </div>
+
+                <div class="form-control">
+                <label for="Password">Password:</label>
+                <input type="password" 
+                name="password"
+                placeholder="Password"
+                 id="psw"/>
+                 
+                 </div>
+
+                 <div class="form-control">
+                    <label for="ConfirmPassword">Confirm Password:</label>
+                    <input type="password" 
+                    name="confirm_password"
+                    placeholder="ConfirmPassword"
+                     id="conpsw"/>
+                     </div>
+
+                <div>
+                <button type="submit" id="submit"> Submit</button>
+                <br>
+                <small> </small>
+            </div>
+            </div>
+            <div>
             </form>
         </div>
     </div>
-
-
 
     <footer>
     <div class="n-footer">
@@ -98,7 +134,7 @@
     </div>
 </footer>
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
