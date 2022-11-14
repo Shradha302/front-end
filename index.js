@@ -6,8 +6,9 @@ const errorMessage = document.querySelector('#error');
 const form = document.querySelector('#form')
 form.addEventListener("submit", (e) => {
     const message = [];
-    //    let validname = userNameValid();
-    //    let validemail = emailValid();
+    console.log('------------')
+     let validname = userNameValid();
+    //  //  let validemail = emailValid();
     if (password.value.length <= 10) {
         message.push("Password must be longer than 10 characters")
     }
@@ -21,6 +22,8 @@ form.addEventListener("submit", (e) => {
 });
 
 function userNameValid() {
+    alert('hiii')
+    console.log(message, 'In username function');
     if (username.value.length <= 6) {
         message.push("username must be longer than 6 characters")
     } else {
