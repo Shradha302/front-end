@@ -3,7 +3,7 @@ const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const psw = document.querySelector("#psw");
 const button = document.querySelector("#submit");
-const conpsw = document.querySelector("#conpsw");
+const conPsw = document.querySelector("#conPsw");
 
 form.addEventListener("submit", e =>
 {
@@ -19,7 +19,7 @@ function checkInputs()
 const usernameValue = username.value;
 const emailValue = email.value;
 const pswValue = psw.value;
-const conpswValue = conpsw.value;
+const conPswValue = conPsw.value;
 
     if(usernameValue == "")
     {
@@ -46,14 +46,14 @@ const conpswValue = conpsw.value;
     } else {
         setSuccessFor(psw);
     }
-
-    if(conpswValue !== pswValue)
+ 
+    if(conPswValue !== pswValue)
     {
         showErrors("confirm password not matched");
         
     } 
      else {
-        setSuccessFor(conpsw)
+        setSuccessFor(conPsw)
     }
     displayErrors()
 } 
@@ -93,9 +93,4 @@ function setSuccessFor(input)
     formControl.className = "form-control success";
 }
 
-function isEmail(email)
-{
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        email
-      ); 
-}
+
