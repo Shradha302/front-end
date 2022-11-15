@@ -21,7 +21,7 @@ function userNameValid() {
       "username must be longer than 6 characters & field is required"
     );
   } else if (!regexName.test(username.value)) {
-    console.log("-----------------", username.value);
+    //console.log("-----------------", username.value);
     showError(username, "Invalid Username");
   } else {
     showSuccess(username);
@@ -31,9 +31,9 @@ function userNameValid() {
 function emailValid() {
   let regexEmail =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (email === "") {
+  if (email.value === null) {
     showError(email, "email is required");
-  } else if (regexEmail.test(email) === false) {
+  } else if (regexEmail.test(email.value) === false) {
     showError(email, "Invalid Email");
   } else {
     showSuccess(email);
@@ -43,15 +43,21 @@ function emailValid() {
 function passwordValid() {
   let regexPass =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/;
-  if (regexPass.test(password) === false) {
+  if (regexPass.test(password.value) === false) {
     showError(password, "Invalid Password");
+  }
+  else{
+    showSuccess(password);
   }
 }
 
 // validation for confPassword
 function confPasswordValid() {
-  if (password.value != confpassword) {
+  if (password.value != confpassword.value) {
     showError(confpassword, "conform password does not match");
+  }
+  else{
+    showSuccess(confpassword);
   }
 }
 // function for error message
