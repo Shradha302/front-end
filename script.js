@@ -9,7 +9,6 @@ form.addEventListener("submit", e =>
 {
 e.preventDefault();
 
-checkInputs();
 });
 
 const errorList = []
@@ -25,46 +24,30 @@ const conPswValue = conPsw.value;
     {
         showErrors('Username cannot be blank');
     
-    } else{
-        setSuccessFor(username);
-    }
-
-    if(emailValue == ""){
+    }else if(emailValue == ""){
         showErrors("email cannot be blank");
     
-    } else if (!isEmail(emailValue))
-    {
-        showErrors("not a valid email");
-    
-    } else {
-        setSuccessFor(email);
-    }
-    if(pswValue =="")
+    } else if(pswValue == "")
     {
         showErrors("password cannot be blank");
         
-    } else {
-        setSuccessFor(psw);
-    }
- 
-    if(conPswValue !== pswValue)
+    } else if(pswValue !== conPswValue)
     {
         showErrors("confirm password not matched");
         
-    } 
-     else {
-        setSuccessFor(conPsw)
+    }else {
+        clearErrors();
     }
+     
     displayErrors()
 } 
 
 function showErrors(errorMessage){
     errorList.push(errorMessage);
-    console.log("showErrors====>", errorMessage)
 }
 
 function clearErrors(){
-    errorList = [];
+    errorList.length = 0;
 }
 
 function displayErrors(){
@@ -75,22 +58,13 @@ function displayErrors(){
 
     })
     
-    setErrorFor(button, errorString);
+    setErrorFor(errorString);
    
 }
 
-function setErrorFor(input, message)
+function setErrorFor(message)
 {
-    const formControl = input.parentElement;
+    const formControl = button.parentElement;
     const small = formControl.querySelector("small");
-    formControl.className = "form-control error";
     small.innerText = message;
 }
-
-function setSuccessFor(input)
-{
-    const formControl = input.parentElement;
-    formControl.className = "form-control success";
-}
-
-
