@@ -9,8 +9,8 @@
     <link rel="icon" type="image/x-icon"
         href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcompanieslogo.com%2Ftata-consultancy-services%2Flogo%2F&psig=AOvVaw1FALYAoZ5JVp7UhJFM-ENE&ust=1667983706149000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNCZ3tSZnvsCFQAAAAAdAAAAABAE">
     <link rel="stylesheet" href="navbar.css" />
+    <script src="index.js" defer></script>
     <title>TCSiON</title>
-
 </head>
 
 <body>
@@ -19,18 +19,18 @@
         <div class="header">
             <div class="title"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-left.png"
                     alt="Tata Logo" /></div>
-            <div class="title_img"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-right.png"
+            <div class="title-img"><img src="https://www.tcsion.com/dotcom/TCSSMB/Login/images/TATA-logo-right.png"
                     alt="Tata Logo" /></div>
         </div>
         <div class="menu-items">
             <img src="tcsionimg.png">
             <div class="items">
-                <a id="phoneno" class="fa-solid fa-phone"> 1800 029 6030</a> |
-                <i class="fa-solid fa-message"></i><a id="redtext"> SMS: 'TCSiON' to 16161</a> |
-                <i class="fa-solid fa-envelope"></i><a id="phoneno"> Email US </a> |
-                <i class="fa-solid fa-computer"></i><a id="phoneno"> Visit Our Portal </a> |
-                <i class="fa-solid fa-circle-exclamation"></i><a id="phoneno"> Help Central </a> |
-                <a id="phoneno"> Language : </a>
+                <a id="phone_no" class="fa-solid fa-phone"> 1800 029 6030</a> |
+                <i class="fa-solid fa-message"></i><a id="red_text"> SMS: 'TCSiON' to 16161</a> |
+                <i class="fa-solid fa-envelope"></i><a id="phone_no"> Email US </a> |
+                <i class="fa-solid fa-computer"></i><a id="phone_no"> Visit Our Portal </a> |
+                <i class="fa-solid fa-circle-exclamation"></i><a id="phone_no"> Help Central </a> |
+                <a id="phone_no"> Language : </a>
 
                 <select name="English">
                     <option value="English">English</option>
@@ -43,36 +43,36 @@
             </div>
         </div>
     </div>
-
-
-    <!-- content -->
-    
+    <!-- content -->  
     <div class="content">
 
         <div class="left-content">
             <img src="ion-login-banner.jpg">
-            <div id="text-wrapper">
+            <div id="text_wrapper">
                 Experience the <a id="best"> Best </a><br>
                 with all new <a id="orange">TCS iON</a>
             </div>
         </div>
 
         <div class="right-content">
-            <form>
+            <div class="error-messages">
+                <h2 class ="error-title" hidden="true">Errors:</h2>
+                <ul class="error-list">
+                    
+                </ul>
+            </div>
+            <form id="form" >
                 <h1>Welcome</h1>
-                <input type="text" placeholder="Username" name="username" required>
-                <input type="email" placeholder="Email Id" name="email" required>
-                <input id="radiobtn" type="radio" name="gender" value="male">Male
-                <input id="radiobtn" type="radio" name="gender" value="female">Female
-                <input type="password" placeholder="Password" name="psw" required>
-                <input type="password" placeholder="Confirm Password" name="confpsw" required><br>
+                <input id= "username" type="text" placeholder="Username" name="username" >
+                <input id="email" type="email" placeholder="Email Id" name="email" >
+                <input id="radiobtn"  type="radio" name="gender" value="male" checked>Male
+                <input id="radiobtn1" type="radio" name="gender" value="female">Female
+                <input id="password" type="password" placeholder="Password" name="psw" >
+                <input id="conf_password" type="password" placeholder="Confirm Password" name="confpsw" ><br>
                 <button type="submit" class="btn1">Signup</button>
             </form>
         </div>
     </div>
-
-
-
     <footer>
     <div class="n-footer">
 

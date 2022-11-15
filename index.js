@@ -1,9 +1,9 @@
 //select all elements
-const username = document.querySelector("#username");
+const userName = document.querySelector("#username");
 const email = document.querySelector("#email");
-const gender = document.querySelector("#radiobtn");
+const gender = document.querySelector("input[name='gender']:checked");
 const password = document.querySelector("#password");
-const confpassword = document.querySelector("#confpassword");
+const confPassword = document.querySelector("#conf_password");
 //selecting error ul
 const errors = document.querySelector(".error-list");
 const errorTitle = document.querySelector(".error-title");
@@ -17,13 +17,23 @@ const passwordErrorMessage = "Password should not be less than 10 characters.";
 const confPassErrorMessage = "Password and Confirm Password must be same";
 //array to store errors
 const errorMessages = [];
-//console.log(username);
+//dynamic li element
+
+//console.log(userName);
+const errorBox = function(errorMessage){
+    const errorbox = document.createElement("li");
+    errorMessages.push(errorMessage);
+    errorbox.classList.add("error-style");
+    errorMessages.push("errorTitle");
+    errorTitle.removeAttribute("hidden");
+    errorbox.innerText = errorMessage;
+    errors.appendChild(errorbox);
+};
 const form = document.querySelector("#form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(gender.value);
-    
-  //    const charcode = username.value.charCode;
+    console.log(gender.value); 
+  //    const charcode = userName.value.charCode;
   //    if(charcode != 0){
   //        if(charcode < 97 || charcode > 122 ){
   //            console.log(emailErrorMessage);
@@ -31,70 +41,63 @@ form.addEventListener("submit", (event) => {
   //        }
   //    }
   // username length validation
-  if (username.value.length < 8) {
+  if (userName.value.length < 8) {
     console.log(lengthErrorMessage);
-    errorMessages.push(lengthErrorMessage);
-
-    const errorbox = document.createElement("li");
-    errorbox.classList.add("length-error");
-    errorTitle.removeAttribute("hidden");
-    errorMessages.push("errorTitle");
-    errorbox.style.border = "1px solid red";
-    errorbox.style.fontWeight = "700";
-    errorbox.innerText = lengthErrorMessage;
-    errors.appendChild(errorbox);
-    username.value = "";
+    // errorMessages.push(lengthErrorMessage);
+    errorBox(lengthErrorMessage);
+    // const errorbox = document.createElement("li");
+    // errorbox.classList.add("error-style");
+    // errorTitle.removeAttribute("hidden");
+    // errorMessages.push("errorTitle");
+    // errorbox.innerText = lengthErrorMessage;
+    //errors.appendChild(errorbox);
+    userName.value = "";
   }
-
   //email validation
   const emailregex =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   if (!email.value.match(emailregex)) {
     console.log(emailErrorMessage);
-    errorMessages.push(emailErrorMessage);
-    const errorbox = document.createElement("li");
-    errorbox.classList.add("email-error");
-    errorbox.style.border = "1px solid red";
-    errorbox.style.fontWeight = "700";
-    errorbox.innerText = emailErrorMessage;
-    errors.appendChild(errorbox);
+    errorBox(emailErrorMessage);
+    // errorMessages.push(emailErrorMessage);
+    // const errorbox = document.createElement("li");
+    // errorbox.classList.add("error-style");  
+    // errorbox.innerText = emailErrorMessage;
+    //errors.appendChild(errorbox);
     email.value = "";
   }
 //   if(gender.value == ''){
 //     console.log(genderErrorMessage);
 //     errorMessages.push(genderErrorMessage);
 //     const errorbox = document.createElement('li');
-//     errorbox.classList.add("gender-error");
+//     errorbox.classList.add("error-style");
 //     errorbox.style.border = "1px solid red";
 //     errorbox.style.fontWeight = "700";
 //     errorbox.innerText = genderErrorMessage;
 //     errors.appendChild(errorbox);
 //     gender.removeAttribute('checked');
 //   }
-
   //password validation
   if (password.value.length < 10) {
     console.log(passwordErrorMessage);
-    errorMessages.push(passwordErrorMessage);
-    const errorbox = document.createElement("li");
-    errorbox.classList.add("password-error");
-    errorbox.style.border = "1px solid red";
-    errorbox.style.fontWeight = "700";
-    errorbox.innerText = passwordErrorMessage;
-    errors.appendChild(errorbox);
+    errorBox(passwordErrorMessage);
+    // errorMessages.push(passwordErrorMessage);
+    // const errorbox = document.createElement("li");
+    // errorbox.classList.add("error-style");
+    // errorbox.innerText = passwordErrorMessage;
+    //errors.appendChild(errorbox);
   }
   //confirm password validation
-  if (confpassword.value != password.value) {
+  if (confPassword.value != password.value) {
     console.log(confPassErrorMessage);
-    errorMessages.push(confPassErrorMessage);
-    const errorbox = document.createElement("li");
-    errorbox.classList.add("confpassword-error");
-    errorbox.style.border = "1px solid red";
-    errorbox.style.fontWeight = "700";
-    errorbox.innerText = confPassErrorMessage;
-    errors.appendChild(errorbox);
+    errorBox(confPassErrorMessage);
+    // errorMessages.push(confPassErrorMessage);
+    // const errorbox = document.createElement("li");
+    // errorbox.classList.add("error-style");
+    // errorbox.innerText = confPassErrorMessage;
+    // errors.appendChild(errorbox);
     password.value = "";
-    confpassword.value = "";
+    confPassword.value = "";
   }
   if (errorMessages.length > 0) {
     // prevent the default
