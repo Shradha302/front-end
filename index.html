@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon"
         href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcompanieslogo.com%2Ftata-consultancy-services%2Flogo%2F&psig=AOvVaw1FALYAoZ5JVp7UhJFM-ENE&ust=1667983706149000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNCZ3tSZnvsCFQAAAAAdAAAAABAE">
     <link rel="stylesheet" href="navbar.css" />
-    <script src="index.js" defer></script>
+    <script src="index2.js" defer></script>
     <title>TCSiON</title>
 
 </head>
@@ -47,7 +47,7 @@
 
 
     <!-- content -->
-    
+
     <div class="content">
 
         <div class="left-content">
@@ -59,19 +59,22 @@
         </div>
 
         <div class="right-content">
-             <div id="error">
+            <div id="error">
             </div>
-            <form id="form">
-                 <label for="username">Username</label>
-                <input type="text" placeholder="Username"  id="username" >
-                
-                <label for="email">Email</label>
-                <input type="email" placeholder="Email Id" id="email" >
-                <label for="password">Password</label>
+            <form id="form" class="form-control">
+                <label for="username" class="heading">Username</label>
+                <input type="text" placeholder="Username" id="username">
+                <span class="error"></span><br>
+                <label for="email" class="heading">Email</label>
+                <input type="email" placeholder="Email Id" id="email">
+                <span class="error"></span><br>
+                <label for="password" class="heading">Password</label>
                 <input type="password" placeholder="Password" id="psw">
-                <label for="label">Confirm Password</label>
+                <span class="error"></span><br>
+                <label for="confpass" class="heading">Confirm Password</label>
                 <input type="password" placeholder="Confirm Password" id="confpsw"><br>
-                <button type="submit">Signup</button> 
+                <span class="error"></span><br>
+                <button type="submit">Signup</button>
             </form>
         </div>
     </div>
@@ -79,29 +82,29 @@
 
 
     <footer>
-    <div class="n-footer">
+        <div class="n-footer">
 
-        <div class="footer-content">
+            <div class="footer-content">
 
-            <span class="circle FB"><i class="fab fa-facebook-f"></i></span>
+                <span class="circle FB"><i class="fab fa-facebook-f"></i></span>
 
-            <span class="circle"><i class="fab fa-twitter"></i></span>
+                <span class="circle"><i class="fab fa-twitter"></i></span>
 
-            <span class="circle"><i class="fab fa-linkedin-in"></i></span>
+                <span class="circle"><i class="fab fa-linkedin-in"></i></span>
 
-            <span class="circle"><i class="fab fa-youtube"></i></span>
+                <span class="circle"><i class="fab fa-youtube"></i></span>
 
-            <span class="circle"><i class="fab fa-github"></i></span>
+                <span class="circle"><i class="fab fa-github"></i></span>
 
+            </div>
+            <div class="footer">
+                <span> &copy; </span>
+                <span id="year1"></span>
+                Tata Consultancy Services. All Rights Reserved.
+
+            </div>
         </div>
-        <div class="footer">
-            <span> &copy; </span>
-            <span id="year1"></span>
-            Tata Consultancy Services. All Rights Reserved.
-
-        </div>
-    </div>
-</footer>
+    </footer>
     </div>
 
 
